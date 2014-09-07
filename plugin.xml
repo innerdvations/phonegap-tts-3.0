@@ -9,7 +9,7 @@
       <asset src="www/tts.js" target="tts.js" />
       
       <js-module src="www/tts.js" name="TTS">
-            <clobbers target="custom.tts" />
+            <clobbers target="plugins.tts" />
       </js-module>
       
       <config-file target="AndroidManifest.xml" parent="/manifest/application">

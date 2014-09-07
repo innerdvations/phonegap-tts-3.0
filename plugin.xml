@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.phonegap.plugins.speech.TTS"
+    version="1.0.0">
+    <name>Text-to-Speech (TTS) Plugin</name>
+    <platform name="android">
+    
+      <asset src="www/tts.js" target="tts.js" />
+      
+      <js-module src="www/tts.js" name="TTS">
+            <clobbers target="custom.tts" />
+      </js-module>
+      
+      <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <activity android:name="com.phonegap.plugins.speech.TTS"
+            android:label="@string/app_name">
+            <intent-filter>
+            </intent-filter>
+        </activity>
+      </config-file>
+      
+      <config-file target="res/xml/config.xml" parent="widget">
+        <feature name="TTS">
+            <param name="android-package" value="com.phonegap.plugins.speech.TTS" />
+        </feature>
+      </config-file>
+      
+      <source-file src="src/android/com/phonegap/plugins/speech/TTS.java" 
+                target-dir="src/com/phonegap/plugins/speech"/> 
+                
+    </platform>
+</plugin>

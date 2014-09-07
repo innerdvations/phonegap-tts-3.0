@@ -8,7 +8,7 @@
     
       <asset src="www/tts.js" target="tts.js" />
       
-      <js-module src="www/tts.js" name="TTS">
+      <js-module src="www/tts.js" name="tts">
             <clobbers target="plugins.tts" />
       </js-module>
       
@@ -21,7 +21,7 @@
       </config-file>
       
       <config-file target="res/xml/config.xml" parent="widget">
-        <feature name="TTS">
+        <feature name="tts">
             <param name="android-package" value="com.phonegap.plugins.speech.TTS" />
         </feature>
       </config-file>
